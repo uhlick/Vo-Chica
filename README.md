@@ -1,2 +1,2 @@
 # VoChicaSite
-Responsive website developed to Vo Chica Restaurant.
+Responsive website developed for Vo Chica Restaurant.
