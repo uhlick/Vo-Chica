@@ -1,0 +1,101 @@
+/* ==== RESET ============================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* ==== VARIABLES ============================= */
+:root {
+
+}
+
+/* ==== BASE ============================= */
+body {
+    -webkit-font-smoothing: antialiased;
+    font: 400 1rem "Open Sans";
+}
+h1 {
+    -webkit-font-smoothing: auto;
+    font: 700 1.875rem "Open Sans";
+}
+
+/* ==== LAYOUT ============================= */
+#header {
+    border-bottom: 1px solid;
+    background-color: #F89F1C;
+}
+nav {
+    background-color: #F89F1C;
+    align-items: center;
+    height: 4.5rem;
+    justify-content: space-between;
+    display: flex;
+}
+.logo {
+
+}
+.container {
+    width: 100%;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+.grid {
+}
+
+.section {
+    padding: 0 0;
+}
+
+/* ==== HOME ============================= */
+#home .text h1 {
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+#home .text p {
+    color: #ffffff;
+    margin-bottom: 3rem;
+}
+.button {
+    font-weight:bold;
+    height: 3rem;
+    padding: 0 1rem;
+	border:2px solid #ffffff;
+    align-items: center;
+    display: inline-flex;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+.button:hover {
+	color:#F89F1C;
+    border:2px solid #F89F1C;
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
+
+#home .container {
+    margin: 0;
+}
+#home .image img {
+    
+}
+#home .text {
+    color: #F89F1C;
+    margin-top: -90%;
+    position: relative;
+    text-align: center;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
