@@ -5,8 +5,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VoChica</title>
-  <link rel="stylesheet" href="style.css">
 </head>
+<!-- ICONS -->
+<link rel="stylesheet" href="assets/fonts/style.css">
+
+<!-- STYLES -->
+<link rel="stylesheet" href="style.css">
+
 <!-- FONTS -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,9 +20,18 @@
 <body>
   <header id="header">
     <nav class="container">
-      <a class="logo" href="#"><img src="/img/LOGO3.png" alt="VoChica"></a>
-      <div class="menu">...
+      <a class="logo" href="#"><img src="img/logobranco.png" alt="VoChica"></a>
+      <div class="menu">
+        <ul class="grid">
+          <li><a href="#home">Inicio</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#services">Servicos</a></li>
+          <li><a href="#testimonials">Depoimentos</a></li>
+          <li><a href="#contact">Contato</a></li>
+        </ul>
       </div>
+      <div class="toggle icon-menu"></div>
+      <div class="toggle icon-close"></div>
     </nav>
   </header>
 
@@ -25,22 +39,31 @@
     <section class="section" id="home">
       <div class="container grid">
         <div class="image">
-          <img src="img/banner1_celular.png" alt="VoChicasite">
+          <img src="img/banner1_celularr.png" alt="VoChicasite">
         </div>
         <div class="text">
-          <h1>Cardapio</h1>
+          <h1>CARDAPIO</h1>
           <p>Entradas, saladas, sanduíches, carnes, massas e sobremesas especiais. Variedade e sabores que agradam a todos os paladares.</p>
-          <a href="#" class="button">CONFIRA</a>
+          <a href="https://v-chica.goomer.app/menu" class="button">Confira</a>
         </div>
       </div>
     </section>
-    <section class="section">
-     <div class="container">section</div>
 
+     <div class="divider-1"></div>
+
+<section class="section" id="about">
+  <div class="container grid">
+    <div class="image">
+      <img src="img/banner2_celular.png" alt="para comer aqui">
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="container grid">Services</div>
     </section>
-  </main>
-
-
-
-</body>
+    </main>
+    <script src="main.js"></script>
+  </body>
 </html>
