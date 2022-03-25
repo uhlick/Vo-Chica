@@ -12,8 +12,8 @@ a {
 }
 
 img {
-    width: 100%;
-    height: auto;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 /* ==== VARIABLES ============================= */
@@ -27,6 +27,7 @@ html {
 }
 
 body {
+    background-color: #000000;
     -webkit-font-smoothing: antialiased;
     font: 400 1rem "Open Sans";
 }
@@ -46,8 +47,7 @@ h1 {
 
 }
 .container {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+
 }
 .grid {
     display: grid;
@@ -62,11 +62,14 @@ h1 {
 
 /* ==== NAVIGATION ============================= */
 nav {
+    top: 1rem;
+    padding: 20px;
     width: 100%;
     align-items: center;
-    height: 4.5rem;
+    height: 4rem;
     justify-content: space-between;
     display: flex;
+    position: fixed;
 }
 
 nav ul li {
@@ -74,20 +77,20 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ffffff;
+    color: #fdb913;
     position: relative;
     transition: 0.3s;
 }
 
 nav ul li a:hover {
-    color: #fdb913;
+    color: #ffffff;
 }
 
 nav ul li a::after {
     content: "";
     width: 0%;
     height: 2px;
-    background: #fdb913;
+    background: #ffffff;
     position: absolute;
     left: 0;
     bottom: -1.5rem;
@@ -135,32 +138,32 @@ nav.show ul.grid {
 
 /* ==== TOGGLE MENU ============================= */
 .toggle {
-    border-radius: 0.2rem;
-    background: #fdb913;
-    color: #4d2f29;
-    font-size: 1.9rem;
+    border-radius: 2rem;
+    padding: 1rem 1rem;
+    background: #030301;
+    color: #ffffff;
+    font-size: 1.5rem;
     cursor: pointer;
 }
 
 nav .icon-close {
-    top: -1.5rem;
+
     opacity: 0;
     visibility: hidden;
     position: absolute;
-    right: 1.5rem;
-    transition: 0.2s;
+    right: 1.4rem;
+    transition: 0.5s;
 }
 
 nav.show div.icon-close {
     position: fixed;
-    top: 1.5rem;
     visibility: visible;
     opacity: 1;
 }
 
 /* ==== HOME ============================= */
 #home .text {
-    margin-top: -110%;
+    margin-top: -160%;
     text-align: center;
     margin-left: 1.5rem;
     margin-right: 1.5rem;
@@ -201,6 +204,7 @@ nav.show div.icon-close {
     margin: 0;
 }
 #home .image img {
+
 }
 
 /* ==== ABOUT ============================== */
