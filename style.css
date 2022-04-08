@@ -16,49 +16,28 @@ img {
     max-height: 100%;
 }
 
-/* ==== VARIABLES ============================= */
-:root {
-
-}
-
-/* ==== BASE ============================= */
+/* ==== MAIN CONFIGURATIONS ============================= */
 html {
     scroll-behavior: smooth;
 }
-
 body {
     background-color: #000000;
     -webkit-font-smoothing: antialiased;
     font: 400 1rem "Open Sans";
 }
-h1 {
-    -webkit-font-smoothing: auto;
-    font: 700 1.875rem "Open Sans";
-}
 
 /* ==== LAYOUT ============================= */
 #header {
-    border-bottom: 2px solid #000000;
-    background-color: #4d2f29;
     display: flex;
     width: 100%;
 }
-.logo {
-
-}
-.container {
-
-}
 .grid {
     display: grid;
-    gap: 2rem;
 }
 
 .section {
     padding: 0 0;
 }
-/* ==== LOGO ============================= */
-
 
 /* ==== NAVIGATION ============================= */
 nav {
@@ -115,13 +94,13 @@ nav .menu ul {
 nav.show .menu ul {
     display: grid;
 }
- /* MOSTRAR MENU */
+ /* SHOW MENU */
 nav.show .menu {
     -webkit-font-smoothing: auto;
     font: 700 1.875rem "Open Sans";
     opacity: 1;
     visibility: visible;
-    background-color: #4d2f29;
+    background-color: #000000ec;
     height: 100vh;
     width: 100vw;
     position: fixed;
@@ -132,6 +111,7 @@ nav.show .menu {
 }
 
 nav.show ul.grid {
+    transition: 0.01s;
     margin-top: -5rem;
     gap: 4rem;
 }
@@ -139,20 +119,22 @@ nav.show ul.grid {
 /* ==== TOGGLE MENU ============================= */
 .toggle {
     border-radius: 2rem;
-    padding: 1rem 1rem;
-    background: #030301;
-    color: #ffffff;
+    padding: 0.8rem 0.8rem;
+    background: #000000c9;
+    color: #fdb913;
     font-size: 1.5rem;
     cursor: pointer;
 }
+.toggle:hover {
+    transition: 0.1s;
+	color:#ffffff;
+}
 
 nav .icon-close {
-
     opacity: 0;
     visibility: hidden;
     position: absolute;
     right: 1.4rem;
-    transition: 0.5s;
 }
 
 nav.show div.icon-close {
@@ -161,12 +143,22 @@ nav.show div.icon-close {
     opacity: 1;
 }
 
-/* ==== HOME ============================= */
+/* ==== FIRST CONTENT  ============================= */
+h1 {
+    -webkit-font-smoothing: auto;
+    font: 700 1.875rem "Open Sans";
+}
+
+#home {
+    border-bottom: 1px solid #e1e1e1;
+    border-radius: 1px;
+    overflow: hidden;
+}
+
 #home .text {
-    margin-top: -160%;
+    align-items: center;
+    margin-top: -32rem;
     text-align: center;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
 }
 
 #home .text h1 {
@@ -204,29 +196,64 @@ nav.show div.icon-close {
     margin: 0;
 }
 #home .image img {
-
+border-radius: 0.1rem;
+ width: 100%;
+ height: 65rem;
 }
 
-/* ==== ABOUT ============================== */
-
-#about .text {
-    margin-top: -110%;
-    text-align: center;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-}
-
-#about .text h1 {
-    font-size: 3rem;
+/* ==== FOOTER ============================== */
+.logo-footer {
     margin-bottom: 1rem;
-    color: #fdb913;
 }
-#about .text p {
-    color: #ffffff;
+#footer .text {
     font-size: 1rem;
-    margin-bottom: 2rem;
 }
 
-#about .container {
-    margin: 0;
+#footer{
+    padding: 1rem 3rem 0rem 3rem;
+    border-width: 0.2rem 0 0 0;
+    border-style:solid;
+    border-color: #272727a2;
+    background-color: #fdb913;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+#second-line {
+    margin: 10px;
+    border: 1px solid #e1e1e1;
+    box-shadow: 0 3px 3px 0 rgb(0 0 0 / 7%);
+    border-radius: 6px;
+    overflow: hidden;
+}
+#third-line {
+    margin: 10px;
+    border: 1px solid #e1e1e1;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.568);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.footer-nav li a {
+    color: #000000;
+    -webkit-font-smoothing: auto;
+    font: 800 1.1rem "Open Sans";
+}
+
+.footer-nav li {
+    padding: 0.2rem;
+}
+
+.share-icon img {
+    height: 37px;
+    width: 37px;
+}
+
+.share {
+    justify-content: center;
+    padding-top: 1rem;
+    border-top: 2px solid;
 }
