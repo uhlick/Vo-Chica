@@ -17,3 +17,13 @@ for (const link of links) {
         nav.classList.remove('show')
     })
 }
+
+/* scrollreveal: mostrar elementos quando der scroll */
+const scrollReveal = ScrollReveal({
+    duration: 1000,
+    reset: true
+})
+
+scrollReveal.reveal('#home .text')
+
+
