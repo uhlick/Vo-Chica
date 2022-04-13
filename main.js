@@ -8,7 +8,7 @@ for(const element of toggle) {
     })
 }
 
-/* quando clickar em um itemd o menu, fechar menu */
+/* quando clickar em um item do menu, fechar menu */
 
 const links = document.querySelectorAll('nav ul li a')
 

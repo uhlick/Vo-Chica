@@ -155,10 +155,11 @@ h1 {
     overflow: hidden;
 }
 
-#home .text {
+.text {
+    padding: 0 20px 0 20px;
     visibility: hidden;
     align-items: center;
-    margin-top: -32rem;
+    margin-top: -35rem;
     text-align: center;
 }
 
@@ -199,18 +200,15 @@ h1 {
 #home .image img {
 border-radius: 0.1rem;
  width: 100%;
- height: 65rem;
+ height: 100%;
 }
 
 /* ==== FOOTER ============================== */
 .logo-footer {
+    height: 50px;
     margin-bottom: 1rem;
 }
-#footer .text {
-    font-size: 1rem;
-}
-
-#footer{
+footer {
     padding: 1rem 3rem 0rem 3rem;
     border-width: 0.2rem 0 0 0;
     border-style:solid;
@@ -231,6 +229,11 @@ h2 {
     font: 800 1.1rem "Open Sans";
 }
 
+.footer-nav li a:hover {
+    transition: 0.1s;
+	color:#ffffff;
+}
+
 .footer-nav li {
     padding: 0.2rem;
 }
@@ -245,3 +248,109 @@ h2 {
     padding-top: 1rem;
     border-top: 2px solid;
 }
+
+/* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+@media (min-width:320px) {
+        /* ==== RESET WIDTH ============================== */
+        a.logo {
+        height: 55px;
+    }
+}
+
+ /* smartphones, Android phones, landscape iPhone */
+@media (min-width:480px) { }
+
+/* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+@media (min-width:600px) { 
+    /* ==== FIRST CONTENT ============================== */
+     /* ==== RESET WIDTH ============================== */
+
+     /* ================================== */
+
+    #second-line {
+        margin-top: -100px;
+    }
+
+
+     .logo-footer {
+         height: 90px;
+        margin-bottom: 1rem;
+    }
+
+     nav.show ul.grid {
+         font-size: 3.2rem;
+        transition: 0.s;
+        margin-top: -5rem;
+        gap: 6rem;
+    }
+
+     .toggle {
+        border-radius: 3rem;
+        padding: 0.8rem 0.8rem;
+        background: #000000c9;
+        color: #fdb913;
+        font-size: 3rem;
+        cursor: pointer;
+        margin-top: 1rem;
+    }
+     a.logo {
+         margin-top: 20px;
+        height: 90px;
+    }
+    #home .image {
+        width: 100%;
+        height: 90%;
+    }
+    .text {
+        margin-top: -84rem;
+    }
+     
+    #home .text h1 {
+        font-size: 5rem;
+        margin-bottom: 1rem;
+        color: #fdb913;
+    }
+    #home .text p {
+        padding: 0 100px 0 100px;
+        color: #ffffff;
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+    .button {
+        font-weight:bold;
+        height: 4.1rem;
+        padding: 0 1rem;
+        border:2px solid #fdb913;
+        align-items: center;
+        display: inline-flex;
+        background-color: #4d2f29;
+        color: #ffffff;
+        font-size: 3rem;
+        cursor: pointer;
+    }
+    
+
+
+
+
+    /* ==== FOOTER ============================== */
+    .footer-nav li a {
+        font: 800 1.7rem "Open Sans";
+    }
+    .share-icon img {
+        height: 47px;
+        width: 47px;
+    }
+    h2 {
+        font: 800 1.5rem "Open Sans";
+    }
+ }
+
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+@media (min-width:801px) {  }
+
+/* big landscape tablets, laptops, and desktops */
+@media (min-width:1025px) {  }
+
+/* hi-res laptops and desktops */
+@media (min-width:1281px) {  }
