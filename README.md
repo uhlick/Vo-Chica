@@ -1,2 +1,2 @@
 # VoChicaSite
-Responsive website developed for Vo Chica Restaurant.
+This is the source code for the Vó Chica at restaurantevochica.com.br
