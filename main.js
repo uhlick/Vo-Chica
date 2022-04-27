@@ -24,14 +24,7 @@ const scrollReveal = ScrollReveal({
     reset: true
 })
 
-scrollReveal.reveal('#home .text')
-
-const scrollRevealToggle = ScrollReveal({
-    duration: 1000,
-    reset: false
-})
-
-scrollRevealToggle.reveal('.toggle, .logo')
+scrollReveal.reveal('#home .text, .toggle, .logo')
 
 
 
