@@ -20,11 +20,11 @@ for (const link of links) {
 
 /* scrollreveal: mostrar elementos quando der scroll */
 const scrollReveal = ScrollReveal({
-    duration: 2000,
-    reset: true
+    duration: 1300,
+    reset: false
 })
 
-scrollReveal.reveal('#home .text, .toggle, .logo')
+scrollReveal.reveal('#home .text, .toggle, .hlistlogo')
 
 
 

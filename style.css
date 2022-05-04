@@ -23,7 +23,7 @@ html {
 body {
     background-color: #000000;
     -webkit-font-smoothing: antialiased;
-    font: 400 1rem "Open Sans";
+    font: 400 13px "Open Sans";
 }
 
 /* ==== LAYOUT ============================= */
@@ -40,6 +40,10 @@ body {
 }
 
 /* ==== NAVIGATION ============================= */
+ul.hlistlogo {
+
+}
+
 nav {
     top: 1rem;
     padding: 20px;
@@ -56,13 +60,13 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fdb913;
+    color: #e2d8c5;
     position: relative;
     transition: 0.3s;
 }
 
 nav ul li a:hover {
-    color: #e2d8c5;
+    color: #ffffff;
 }
 
 nav ul li a::after {
@@ -113,16 +117,17 @@ nav.show .menu {
 nav.show ul.grid {
     transition: 0.01s;
     margin-top: -5rem;
-    gap: 4rem;
+    gap: 2rem;
 }
 
 /* ==== TOGGLE MENU ============================= */
 .toggle {
+    backdrop-filter: saturate(180%) blur(20px);
     border-radius: 2rem;
     padding: 0.8rem 0.8rem;
-    background: #000000c9;
+    background: #000000a4;
     color: #fdb913;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     cursor: pointer;
 }
 .toggle:hover {
@@ -146,20 +151,21 @@ nav.show div.icon-close {
 /* ==== FIRST CONTENT  ============================= */
 h1 {
     -webkit-font-smoothing: auto;
-    font: 700 1.875rem "Open Sans";
+    font: 700 1.675rem "Open Sans";
 }
 
 #home {
-    margin-top: -4rem;
+    margin-top: -14rem;
     border-bottom: 1px solid #e1e1e1;
-    border-radius: 1px;
+    box-shadow: 0 3px 3px 0 rgb(0 0 0 / 7%);    
     overflow: hidden;
     background-image: url("img/banner14.png");
     background-color: #000000;
     background-repeat: no-repeat;
+    background-position: center;
 }
 .text {
-    margin-top: 20rem;
+    margin-top: 27rem;
     padding: 0 20px 0 20px;
     visibility: hidden;
     text-align: center;
@@ -208,48 +214,56 @@ h1 {
 
 /* ==== FOOTER ============================== */
 .logo-footer {
+    margin-top: 1rem;
     margin-bottom: 1rem;
 }
 footer {
-    padding: 1rem 3rem 0rem 3rem;
-    border-width: 0.2rem 0 0 0;
-    border-style:solid;
-    border-color: #272727a2;
     background-color: #000000;
+    border-top: 1px solid #d2d2d7;
     text-align: center;
 }
 
+
+
 h2 {
-    color: #fdb913;
-    font-size: 1.4rem;
+    color: #ffffff;
     margin-bottom: 0.5rem;
+    font: 400 1rem "Open Sans";
 }
 
+.footer-nav {
+    margin-bottom: 1rem;
+}
 
 .footer-nav li a {
-    color: #fdb913;
+    padding: 12px;
+    color: #ffffff;
     -webkit-font-smoothing: auto;
-    font: 800 1.4rem "Open Sans";
+    font: 400 1rem "Open Sans";
 }
 
 .footer-nav li a:hover {
     transition: 0.3s;
-	color:#e2d8c5;
+	color:#fdb913;
 }
 
 .footer-nav li {
     padding: 0.2rem;
 }
 
+.share-icon {
+    margin-left: 1rem;
+}
+
 .share-icon img {
     height: 37px;
     width: 37px;
+    margin-right: 1rem;
 }
 
 .share {
     justify-content: center;
     padding-top: 1rem;
-    border-top: 2px solid #e2d8c5;
 }
 
 /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
@@ -270,33 +284,50 @@ h2 {
 
      /* ================================== */
 
-    #second-line {
-        margin-top: -100px;
+     .third-image img {
+        border: 1px solid #e1e1e1;
+        box-shadow: 0 3px 3px 0 rgb(0 0 0 / 7%);
+        border-radius: 6px;
     }
 
+    .second-image img{
+        border: 1px solid #e1e1e1;
+        box-shadow: 0 3px 3px 0 rgb(0 0 0 / 7%);
+        border-radius: 6px;
+    }
+
+    #second-line {
+        margin-right: 1rem;
+        gap: 1rem;
+        padding: 15px;
+        text-align: center;
+        grid-template-columns: 50% 50%;
+        display: grid;
+
+    }
 
      .logo-footer {
         margin-bottom: 1rem;
     }
 
      nav.show ul.grid {
-         font-size: 3.2rem;
-        transition: 0.s;
-        margin-top: -5rem;
-        gap: 6rem;
+         font-size: 2rem;
+        transition: 0.2s;
+        gap: 4rem;
     }
 
      .toggle {
+        backdrop-filter: saturate(180%) blur(20px);
         border-radius: 3rem;
         padding: 0.8rem 0.8rem;
-        background: #000000c9;
+        background: #000000a4;
         color: #fdb913;
-        font-size: 2rem;
+        font-size: 1.4rem;
         cursor: pointer;
         margin-top: 0.5rem;
     }
      a.logo {
-        margin-top: 20px;
+        margin-top: 25px;
         height: 80px;
     }
     #home .image {
@@ -340,15 +371,17 @@ h2 {
 
 
     /* ==== FOOTER ============================== */
+
+    .footer-nav {
+        margin-top: 1rem;
+    }
+
     .footer-nav li a {
-        font: 800 1.7rem "Open Sans";
+        font: 400 1rem "Open Sans";
     }
     .share-icon img {
         height: 47px;
         width: 47px;
-    }
-    h2 {
-        font: 800 1.5rem "Open Sans";
     }
  }
 
@@ -361,25 +394,54 @@ h2 {
 /* hi-res laptops and desktops */
 @media (min-width:1281px) { 
 
+    .third-image img {
+        border: 1px solid #e1e1e1;
+        box-shadow: 0 3px 3px 0 rgb(0 0 0 / 7%);
+        border-radius: 6px;
+    }
+
+    .second-image img{
+        border: 1px solid #e1e1e1;
+        box-shadow: 0 3px 3px 0 rgb(0 0 0 / 7%);
+        border-radius: 6px;
+    }
+
+    #second-line {
+        margin-right: 1rem;
+        gap: 1rem;
+        padding: 15px;
+        text-align: center;
+        grid-template-columns: 50% 50%;
+        display: grid;
+
+    }
+
+    .hlistlogo {
+        display: none;
+    }
+    .footer-nav {
+        margin-bottom: 1rem;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+
     ul.grid {
-        margin-right: 20rem;
+        align-items: center;
     
     }
 
-    .second-image img {
-        margin-top: 100px;
-    }
 
-    #header {
-        position: relative;
-        background-color: #0000009a;
-    }
+
 
     nav.container {
-        padding: 0 20px 0 20px;
-        max-width: 1800px;
-        margin-left: auto;
+        backdrop-filter: saturate(180%) blur(20px);
+        background-color: rgba(0, 0, 0, 0.59);
+        position: fixed;
+        max-width: 100%;
         margin-right: auto;
+        margin-top: -16px;
+        height: 50px;
     }
 
     nav .icon-menu {
@@ -404,14 +466,12 @@ h2 {
      }
 
      nav ul li a::after {
-        content: "";
         width: 0%;
-        height: 3px;
-        background: #e2d8c5;
+        height: 0px;
         position: absolute;
         left: 0;
         bottom: -0.1rem;
-        transition: width 0.3s;
+        transition: width 0.2s;
     } 
 
  }
