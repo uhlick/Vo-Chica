@@ -21,7 +21,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    background-color: #ffffff;
+    background-color: #000000;
     -webkit-font-smoothing: antialiased;
     font: 400 13px "Open Sans";
 }
@@ -111,6 +111,12 @@ nav.show .menu {
     place-content: center;
 }
 
+
+main.show {
+   display: none;
+}
+
+
 nav.show ul.grid {
     transition: 0.01s;
     margin-top: -5rem;
@@ -145,14 +151,20 @@ nav.show div.icon-close {
     opacity: 1;
 }
 
+nav.show .section {
+    display: none;
+}
+
 /* ==== FIRST CONTENT  ============================= */
 h1 {
     -webkit-font-smoothing: auto;
     font: 700 1.675rem "Open Sans";
 }
 
+
+
 #home {
-    margin-top: -rem;
+    margin-top: -20rem;
     border-bottom: 1px solid #e1e1e1;
     box-shadow: 0 3px 3px 0 rgb(0 0 0 / 7%);    
     overflow: hidden;
@@ -162,11 +174,12 @@ h1 {
     background-position: center;
 }
 .text {
-    margin-top: 20rem;
+    margin-top: 30rem;
     padding: 0 20px 0 20px;
     visibility: hidden;
     text-align: center;
 }
+
 
 #home .text h1 {
     font-size: 3rem;
@@ -174,8 +187,9 @@ h1 {
     color: #fdb913;
 }
 #home .text p {
-    color: #ffffff;
-    font-size: 1rem;
+    padding: 0 2rem 0 2rem;
+    color: #e2d8c5;
+    font-size: 1.2rem;
     margin-bottom: 2rem;
 }
 #home .image img {
@@ -246,6 +260,7 @@ h1 {
 }
 
 #second-line {
+    background-color: #ffffff;
     gap: 1rem;
     padding: 20px;
     text-align: center;
@@ -345,7 +360,7 @@ h2 {
     }
 
     #second-line {
-        margin-right: 1rem;
+        background-color: #ffffff;
         gap: 1rem;
         padding: 15px;
         text-align: center;
@@ -359,7 +374,7 @@ h2 {
     }
 
      nav.show ul.grid {
-         font-size: 2rem;
+        font-size: 2rem;
         transition: 0.2s;
         gap: 4rem;
     }
@@ -395,7 +410,7 @@ h2 {
         color: #fdb913;
     }
     #home .text p {
-        padding: 0 100px 0 100px;
+        padding: 0 10% 0 10%;
         color: #e2d8c5;
         font-size: 1.4rem;
         margin-bottom: 2rem;
@@ -441,6 +456,27 @@ h2 {
 /* hi-res laptops and desktops */
 @media (min-width:1281px) { 
 
+    #home {
+        margin-top: 0rem;
+        border-bottom: 1px solid #e1e1e1;
+        box-shadow: 0 3px 3px 0 rgb(0 0 0 / 7%);    
+        overflow: hidden;
+        background-image: url("img/banner14.png");
+        background-color: #000000;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    #home .text p {
+        padding: 0 30% 0 30%;
+        color: #e2d8c5;
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+    }
+    .text {
+        margin-top: 20rem;
+    }
+
     nav.container {
         backdrop-filter: saturate(180%) blur(20px);
         background-color: rgba(0, 0, 0, 0.59);
@@ -482,7 +518,10 @@ h2 {
     }
 
     #second-line {
-        margin-right: 1rem;
+        background-color: #ffffff;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 20px;
         gap: 1rem;
         padding: 3rem 4rem 3rem 4rem;
         text-align: center;
