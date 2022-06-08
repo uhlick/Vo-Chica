@@ -13,7 +13,6 @@ img {
 a {
   color: #fff;
   text-decoration: none;
-  transition: s;
 }
 
 a:hover {
@@ -38,7 +37,7 @@ nav ul li a {
   display: flex;
   justify-content: center;
   position: relative;
-  top: 2rem;
+  top: 0.8rem;
     }
 /*==== HEADER ============================== */
 .mobile-menu {
@@ -46,7 +45,7 @@ nav ul li a {
   position: fixed;
   backdrop-filter: saturate(180%) blur(20px);
   border-radius: 2rem;
-  padding: 0.3rem 0.15rem;
+  padding: 0.5rem 0.25rem;
   background: #000000a4;
   color: #e2d8c5;
   font-size: 1.2rem;
@@ -64,7 +63,7 @@ nav ul li a {
 }
 
 .mobile-menu.active .line1 {
-  transform: rotate(-45deg) translate(-8px, 8px);
+  transform: rotate(-45deg) translate(-5px, 6px);
 }
 
 .mobile-menu.active .line2 {
@@ -72,7 +71,7 @@ nav ul li a {
 }
 
 .mobile-menu.active .line3 {
-  transform: rotate(45deg) translate(-2px, -4px);
+  transform: rotate(45deg) translate(-5px, -6px);
 }
 
 .nav-list {
@@ -81,7 +80,7 @@ nav ul li a {
 }
 
 .nav-list li {
-  letter-spacing: 2 px;
+  letter-spacing: 2px;
 }
 
 .nav-list.active {
@@ -96,15 +95,8 @@ nav ul li a {
   height: auto;
   }
 
-.first-content-smartphone img {
-  max-width: 496px;
-  width: 120%;
-  min-width: 400px;
-}   
+
 /*==== BODY-TILE CONTENT ============================== */
-.mcd-tile-container {
-  width: 10;
-}
 
 .mcd-tile-container__content-action{
   padding-top: 1rem;
@@ -155,9 +147,7 @@ figure.mcd-media-image {
 }
 
 
-.mcd-tile-container {
-  width: 10;
-}
+
 
 .mcd-tile-container__content-action{
   padding-top: 1rem;
@@ -177,7 +167,7 @@ figure.mcd-media-image {
 }
 
 #body-tiles {
-  margin-top: -2rem;
+  margin-top: -1rem;
   background-color: #ffffff;
   gap: 2.5rem;
   padding: 1rem;
@@ -213,7 +203,6 @@ h2 {
 .footer-nav li a {
     padding: 12px;
     color: #ffffff;
-    -webkit-font-smoothing: auto;
     font: 400 1rem "Open Sans";
 }
 
@@ -261,6 +250,7 @@ main {
 
 /*==== HEADER ============================== */
 .mobile-menu {
+  top: 1.1rem;
   position: fixed;
   z-index: 999;
   display: block;
@@ -284,10 +274,10 @@ nav img {
   display: flex;
   justify-content: center;
   position: fixed;
-  top: 0rem;
+  top: -7rem;
   right: 0;
   width: 100vw;
-  height: 100%;
+  height: 119%;
   background: #000000;
   flex-direction: column;
   align-items: center;
@@ -302,6 +292,18 @@ nav img {
 
 /*==== BODY-TILE CONTENT ============================== */
 /*==== FOOTER ============================== */
+small {
+  margin-top: 0.5rem;
+  font-size: 0.5rem;
+}
+.logo-footer img {
+height: 45px;
+}
+h2 {
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  font: 400 0.8rem "Open Sans";
+}
 
 }
 
@@ -319,10 +321,11 @@ main {
   display: flex;
   justify-content: center;
   position: relative;
-  top: 2rem;
+  top: 0.8rem;
   }
 /*==== HEADER ============================== */
 .mobile-menu {
+  top: 1.1rem;
   position: fixed;
   z-index: 999;
   display: block;
@@ -347,10 +350,10 @@ nav img {
   display: flex;
   justify-content: center;
   position: fixed;
-  top: 0rem;
+  top: -9rem;
   right: 0;
   width: 100vw;
-  height: 100%;
+  height: 120%;
   background: #000000;
   flex-direction: column;
   align-items: center;
@@ -392,9 +395,6 @@ nav img {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.mcd-tile-container {
-  width: 10;
-}
 
 .mcd-tile-container__content-action{
   padding-top: 1rem;
@@ -432,6 +432,7 @@ main {
 } 
   /*==== LOGO ============================== */
   .hlistl {
+    height: 3rem;
     display: flex;
   }
 .logo {
@@ -448,9 +449,9 @@ nav {
   background-color: rgba(0, 0, 0, 0.841);
   justify-content: space-around;
   align-items: center;
-  height: 4rem;
+  height: 3.5rem;
   display: flex;
-  font-family: 'Open Sans', sans-serif;
+  font: 400 1.075rem "Open Sans";
   position: fixed;
 }
 
@@ -465,6 +466,7 @@ nav {
 /*==== FIRST-BANNER ============================== */
 
 .first-content-desktop {
+  justify-content: center;
   position: relative;
   top: -4.5rem;
   display:flex;
@@ -493,9 +495,6 @@ nav {
 
 
 
-.mcd-tile-container {
-  width: 10;
-}
 .mcd-tile-container:hover {
   border: 2px solid #e1e1e1;
 }
