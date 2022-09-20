@@ -1,4 +1,4 @@
-/*==== RESET ============================== */
+/*==== REbET ============================== */
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +9,16 @@ html {
 img {
   max-width: 100%;
   max-height: 100%;
+width: 100%;
+height: 100%;
+}
+
+.logo img{
+width: 115px;
+}
+
+.logo-footer img {
+  width: 100px;
 }
 a {
   color: #fff;
@@ -25,19 +35,46 @@ nav {
   transition: .4s;
 }
 nav ul li a {
+  font-size: 1.5rem;
   white-space: nowrap;
   color: #e2d8c5;
   position: relative;
+}
+.nav-list li {
+  display: block;
+  text-decoration: none;
+}
+.nav-list {
+  padding-bottom: 1rem;
+  z-index: 998;
+  display: flex;
+  position: fixed;
+  top: -2.5rem;
+  right: 0;
+  width: 100vw;
+  height: 19rem;
+  border-radius: 43px;
+  background: #000000e0;
+  gap: 1rem;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
 }
 
 /*==== LOGO ============================== */
 
 .logo {
+  width: 100%;
+  height: auto;
   z-index: 998;
   display: flex;
   justify-content: center;
   position: relative;
-  top: 0.8rem;
+  top: 2rem;
     }
 /*==== HEADER ============================== */
 .mobile-menu {
@@ -74,27 +111,32 @@ nav ul li a {
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
-.nav-list {
-  list-style: none;
-  display: flex;
-}
+
 
 .nav-list li {
   letter-spacing: 2px;
 }
 
 .nav-list.active {
-  transform: translateX(0);
+  transform: translateY(0vh);
 }
 /*==== FIRST-BANNER ============================== */
-.first-content-desktop {
-  display: none;
-    }
+.first-content-desktop img {
+  margin-top: -1rem;
+  filter: brightness(85%);
+width: 100%;
+height: 100%;
+}
+
 .first-content-smartphone {
   width: 100%;
   height: auto;
+  margin-top: -1rem;
   }
-
+  .first-content-smartphone img {
+    width: 100%;
+    height: auto;
+    }
 
 /*==== BODY-TILE CONTENT ============================== */
 
@@ -115,9 +157,9 @@ nav ul li a {
   text-align: center;
 }
 .button-mcd {
-  font: 400 1.175rem "Open Sans";
+  font: 400 1.8vw "Open Sans";
   border-radius: 5px;
-  height: 2.6rem;
+  height: 2rem;
   padding: 0 1rem;
   border:2px solid #fdb913;
   align-items: center;
@@ -134,11 +176,11 @@ nav ul li a {
 @keyframes navLinkFade {
   from {
     opacity: 0;
-    transform: translateX(50px);
+    transform: translateY(-50px);
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(-0);
   }
 }
 
@@ -167,7 +209,7 @@ figure.mcd-media-image {
 }
 
 #body-tiles {
-  margin-top: -1rem;
+  margin-top: -3rem;
   background-color: #ffffff;
   gap: 2.5rem;
   padding: 1rem;
@@ -241,16 +283,25 @@ h2 {
 
 
 /*============================================================ SMARTPHONE ===================================================================== */
-@media (max-width: 500px) {
+@media (max-width: 600px) {
 main {
   position: relative;
   top: -3.5rem;
 }
+h4 {
+  font-size: 4.2vw;
+}
+p {
+  font-size: 3.8vw;
+}
+
+.first-content-desktop {
+  display: none;
+    }
 /*==== LOGO ============================== */
 
 /*==== HEADER ============================== */
 .mobile-menu {
-  top: 1.1rem;
   position: fixed;
   z-index: 999;
   display: block;
@@ -269,34 +320,29 @@ nav img {
   justify-content: center;
 }
 
-.nav-list {
-  z-index: 998;
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  top: -7rem;
-  right: 0;
-  width: 100vw;
-  height: 119%;
-  background: #000000;
-  flex-direction: column;
-  align-items: center;
-  gap: 6rem;
-  transform: translateX(100%);
-  transition: transform 0.3s ease-in;
-}
-.nav-list li {
-  margin-left: 0;
-  opacity: 0;  }
+
 /*==== FIRST-BANNER ============================== */
 
 /*==== BODY-TILE CONTENT ============================== */
+.button-mcd {
+  font: 400 4vw "Open Sans";
+  border-radius: 5px;
+  height: 2rem;
+  padding: 0 1rem;
+  border:2px solid #fdb913;
+  align-items: center;
+  display: inline-flex;
+  background-color: #fdb913;
+  color: black;
+  cursor: pointer;
+}
 /*==== FOOTER ============================== */
 small {
   margin-top: 0.5rem;
   font-size: 0.5rem;
 }
 .logo-footer img {
+  width: auto;
 height: 45px;
 }
 h2 {
@@ -308,7 +354,7 @@ h2 {
 }
 
 /*============================================================TABLET===================================================================== */
-@media screen and (min-width: 501px) and (max-width: 1025px){
+@media screen and (min-width: 600px) and (max-width: 1025px){
 body {
   overflow-x: hidden;
   }
@@ -316,16 +362,29 @@ main {
   position: relative;
   top: -3.5rem;
   }
+  h4 {
+    font-size: 2.6vw;
+  }
+  p {
+    font-size: 2.3vw;
+  }
+
+  .nav-list.active {
+    transform: translateY(0vh);
+}
+
+  .button-mcd {
+    font: 400 2.5vw "Open Sans";
+}
 /*==== LOGO ============================== */
 .logo {
   display: flex;
   justify-content: center;
   position: relative;
-  top: 0.8rem;
+  top: 2rem;
   }
 /*==== HEADER ============================== */
 .mobile-menu {
-  top: 1.1rem;
   position: fixed;
   z-index: 999;
   display: block;
@@ -345,28 +404,16 @@ nav img {
   justify-content: center;
   }
   
-.nav-list {
-  z-index: 998;
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  top: -9rem;
-  right: 0;
-  width: 100vw;
-  height: 120%;
-  background: #000000;
-  flex-direction: column;
-  align-items: center;
-  gap: 6rem;
-  transform: translateX(100%);
-  transition: transform 0.3s ease-in; }
 
-.nav-list li {
-  margin-left: 0;
-  opacity: 0;
-}
 /*==== FIRST-BANNER ============================== */
+.first-content-desktop img {
+
+  filter: brightness(85%);
+width: 100%;
+height: 100%;
+}
 .first-content-desktop {
+  margin-top: -1rem;
   height: 100%;
   display:flex;
     }
@@ -377,18 +424,13 @@ nav img {
   height: auto;
   }
 
-.first-content-smartphone img {
-  max-width: 496px;
-  width: 120%;
-  min-width: 400px;
-  } 
+
 
 /*==== BODY-TILE CONTENT ============================== */
 
 #body-tiles {
   margin-top: -2.4rem;
   background-color: #ffffff;
-  gap: 2rem;
   padding: 1rem;
   text-align: center;
   display: grid;
@@ -424,79 +466,107 @@ nav img {
 
 /*============================================================ PC ===================================================================== */
 @media screen and (min-width: 1026px) {
-main {
-  background-size: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-} 
-  /*==== LOGO ============================== */
-  .hlistl {
-    height: 3rem;
-    display: flex;
-  }
-.logo {
-  display: none;
-}
-/*==== HEADER ============================== */
-.header {
-  z-index: 999;
-}
-nav {
-  font-size: 1rem;
-  z-index: 999;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.841);
-  justify-content: space-around;
-  align-items: center;
-  height: 3.5rem;
-  display: flex;
-  font: 400 1.075rem "Open Sans";
-  position: fixed;
-}
 
-.nav-list {
-  transition: transform 0.3s ease-in;
-  gap: 5rem;
-  align-items: center;
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
+
+
+  h4 {
+    font-size: 1vw;
+  }
+  p {
+    font-size: 1.1vw;
+  }
+  
+  main {
+    position: relative;
+    top: -3.5rem;
+  }
+  /*==== LOGO ============================== */
+  
+  /*==== HEADER ============================== */
+  .mobile-menu {
+    position: fixed;
+    z-index: 999;
+    display: block;
+  } 
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  nav img {
+    display: none;
+    justify-content: center;
+  }
+  
+
+
+  /*==== FIRST-BANNER ============================== */
+  
+  /*==== BODY-TILE CONTENT ============================== */
+  /*==== FOOTER ============================== */
+  small {
+    margin-top: 0.5rem;
+    font-size: 0.5rem;
+  }
+  .logo-footer img {
+    transform:scale(1.005);
+    transition: 0.2s;
+  height: 45px;
+  }
+  
+  h2 {
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    font: 400 0.8rem "Open Sans";
+  }
+
+  .button-mcd {
+    font: 400 1vw "Open Sans";
+    border-radius: 5px;
+    height: 2.2rem;
+    padding: 0 1rem;
+    border:2px solid #fdb913;
+    align-items: center;
+    display: inline-flex;
+    background-color: #fdb913;
+    color: black;
+    cursor: pointer;
 }
+  
 /*==== FIRST-BANNER ============================== */
 
 .first-content-desktop {
-  justify-content: center;
-  position: relative;
-  top: -4.5rem;
-  display:flex;
-  width: 100%;
-  height: auto;
+  margin-top: -1rem;
+  height: 100%;
+  width: auto;
+  display: flex;
   }
 
 .first-content-smartphone {
+  margin-top: -1rem;
   display: none;
   width: 100%;
   height: auto;
 }
 /*==== BODY-TILE CONTENT ============================== */
 #body-tiles {
-  margin-top: -14rem;
-  position: relative;
-  background-color: #ffffff;
-  gap: 3rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  padding-top: 2rem;
+  background-color: rgb(255, 255, 255);
   text-align: center;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 
 
 .mcd-tile-container:hover {
-  border: 2px solid #e1e1e1;
+  border:1px solid #e2d8c5;
+  transform:scale(1.005);
+  transition: 0.2s;
+
 }
 
 .mcd-tile-container__content-action{
@@ -516,20 +586,9 @@ nav {
     text-align: center;
 }
 
-.button-mcd {
-    font: 400 1.175rem "Open Sans";
-    border-radius: 5px;
-    height: 2.6rem;
-    padding: 0 1rem;
-    border:2px solid #fdb913;
-    align-items: center;
-    display: inline-flex;
-    background-color: #fdb913;
-    color: black;
-    cursor: pointer;
-}
 
 .button-mcd:hover {
+  cursor: pointer;
     transition: 0.3s;
     color:#e2d8c5;
     border:2px solid #e2d8c5;
